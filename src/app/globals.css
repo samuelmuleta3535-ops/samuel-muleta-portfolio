@@ -1,8 +1,28 @@
 @import "tailwindcss";
 
+/* Make Tailwind dark: classes follow the selected website theme */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  --background: #080d1a;
+  --foreground: #ffffff;
+  --card-background: #101b32;
+  --muted-foreground: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --section-background: #080d1a;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --background: #f8fafc;
+  --foreground: #111827;
+  --card-background: #ffffff;
+  --muted-foreground: #4b5563;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --section-background: #f1f5f9;
 }
 
 @theme inline {
@@ -12,15 +32,186 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Smooth theme transitions */
+body,
+nav,
+section,
+footer,
+article,
+.card {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* LIGHT MODE: backgrounds */
+:root[data-theme="light"] [class*="bg-[#080d1a]"],
+:root[data-theme="light"] [class*="bg-[#0c1324]"] {
+  background-color: var(--background) !important;
+}
+
+:root[data-theme="light"] [class*="bg-[#101b32]"] {
+  background-color: var(--card-background) !important;
+}
+
+:root[data-theme="light"] [class*="bg-[#152440]"] {
+  background-color: #eaf1fb !important;
+}
+
+:root[data-theme="light"] nav[class*="bg-[#080d1a]"] {
+  background-color: rgba(248, 250, 252, 0.96) !important;
+}
+
+/* LIGHT MODE: text colors */
+:root[data-theme="light"] .text-white {
+  color: #111827 !important;
+}
+
+:root[data-theme="light"] .text-gray-200,
+:root[data-theme="light"] .text-gray-300 {
+  color: #374151 !important;
+}
+
+:root[data-theme="light"] .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+:root[data-theme="light"] .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* Keep white text on blue buttons */
+:root[data-theme="light"] .text-white[class*="bg-blue-"],
+:root[data-theme="light"] a[class*="bg-blue-"],
+:root[data-theme="light"] button[class*="bg-blue-"] {
+  color: #ffffff !important;
+}
+
+/* LIGHT MODE: borders */
+:root[data-theme="light"] [class*="border-white/"] {
+  border-color: var(--border-color) !important;
+}
+
+/* LIGHT MODE: inputs */
+:root[data-theme="light"] input,
+:root[data-theme="light"] textarea,
+:root[data-theme="light"] select {
+  color: #111827;
+  background-color: #ffffff;
+  border-color: #d1d5db;
+}
+
+:root[data-theme="light"] input::placeholder,
+:root[data-theme="light"] textarea::placeholder {
+  color: #6b7280;
+}
+
+/* DARK MODE */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* CERTIFICATES - DARK MODE FIX */
+:root[data-theme="dark"] #certificates {
+  background-color: #080d1a !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme="dark"] #certificates h2,
+:root[data-theme="dark"] #certificates h3,
+:root[data-theme="dark"] #certificates h4 {
+  color: #ffffff !important;
+}
+
+:root[data-theme="dark"] #certificates p {
+  color: #9ca3af;
+}
+
+:root[data-theme="dark"] #certificates .rounded-lg.border {
+  background-color: #0c1324 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:root[data-theme="dark"] #certificates .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+:root[data-theme="dark"] #certificates .text-blue-700,
+:root[data-theme="dark"] #certificates .text-blue-600 {
+  color: #60a5fa !important;
+}
+
+/* CERTIFICATES - LIGHT MODE */
+:root[data-theme="light"] #certificates {
+  background-color: #f8fafc !important;
+  color: #111827 !important;
+}
+
+:root[data-theme="light"] #certificates h2,
+:root[data-theme="light"] #certificates h3,
+:root[data-theme="light"] #certificates h4 {
+  color: #111827 !important;
+}
+
+:root[data-theme="light"] #certificates .rounded-lg.border {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+/* FIX SOCIAL MEDIA ICONS IN LIGHT MODE */
+:root[data-theme="light"] #contact a[aria-label] svg {
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+  color: #374151 !important;
+  fill: currentColor !important;
+}
+
+:root[data-theme="light"] #contact a[aria-label] svg path {
+  fill: currentColor !important;
+}
+
+/* SOCIAL ICONS - LIGHT MODE */
+:root[data-theme="light"] #contact .social-icon {
+  display: block !important;
+  width: 23px !important;
+  height: 23px !important;
+  color: #1f2937 !important;
+  fill: #1f2937 !important;
+}
+
+:root[data-theme="light"] #contact .social-icon path {
+  fill: #1f2937 !important;
+}
+
+/* SOCIAL ICONS - DARK MODE */
+:root[data-theme="dark"] #contact .social-icon {
+  display: block !important;
+  width: 23px !important;
+  height: 23px !important;
+  color: #e5e7eb !important;
+  fill: #e5e7eb !important;
+}
+
+:root[data-theme="dark"] #contact .social-icon path {
+  fill: #e5e7eb !important;
 }
