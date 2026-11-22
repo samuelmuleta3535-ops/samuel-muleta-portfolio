@@ -2,6 +2,8 @@
 "use client";
 
 import { useState, type FormEvent, type ChangeEvent } from "react";
+import { useLanguage } from "@/components/LanguageProvider";
+import { translations } from "@/lib/translations";
 
 type ContactFormData = {
   name: string;
@@ -54,6 +56,9 @@ function SocialIcon({ name }: { name: SocialIconName }) {
 }
 
 export default function Contact() {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -63,9 +68,9 @@ export default function Contact() {
 
   const [status, setStatus] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [statusType, setStatusType] = useState<"success" | "error" | "info">(
-    "info"
-  );
+  const [statusType, setStatusType] = useState<
+    "success" | "error" | "info"
+  >("info");
 
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -84,7 +89,7 @@ export default function Contact() {
     if (submitting) return;
 
     setSubmitting(true);
-    setStatus("Sending your message...");
+    setStatus(t.sendingStatus);
     setStatusType("info");
 
     try {
@@ -99,12 +104,10 @@ export default function Contact() {
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(
-          result.message || "Unable to send your message. Please try again."
-        );
+        throw new Error(result.message || t.sendError);
       }
 
-      setStatus("Your message has been sent successfully!");
+      setStatus(t.successStatus);
       setStatusType("success");
 
       setFormData({
@@ -117,7 +120,7 @@ export default function Contact() {
       setStatus(
         error instanceof Error
           ? error.message
-          : "Something went wrong. Please try again."
+          : t.unexpectedError
       );
       setStatusType("error");
     } finally {
@@ -165,20 +168,21 @@ export default function Contact() {
         {/* Section Heading */}
         <div className="mb-10 text-center sm:mb-12">
           <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-blue-600 sm:text-sm sm:tracking-widest dark:text-blue-400">
-            GET IN TOUCH
+            {t.subtitle}
           </p>
 
           <h2
             id="contact-heading"
             className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white"
           >
-            Contact <span className="text-blue-600 dark:text-blue-400">Me</span>
+            {t.title}{" "}
+            <span className="text-blue-600 dark:text-blue-400">
+              {t.titleAccent}
+            </span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base sm:leading-8 dark:text-gray-400">
-            I am always interested in learning, collaborating on
-            projects, and exploring new opportunities. Feel free
-            to contact me through any of the following channels.
+            {t.description}
           </p>
         </div>
 
@@ -194,7 +198,7 @@ export default function Contact() {
             </div>
 
             <h3 className="text-lg font-semibold text-gray-900 transition group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-300">
-              Email
+              {t.emailTitle}
             </h3>
 
             <p className="mt-3 break-all text-sm leading-6 text-gray-600 dark:text-gray-400">
@@ -202,7 +206,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-4 text-sm font-medium text-blue-600 dark:text-blue-400">
-              Send an Email →
+              {t.emailAction} →
             </p>
           </a>
 
@@ -216,7 +220,7 @@ export default function Contact() {
             </div>
 
             <h3 className="text-lg font-semibold text-gray-900 transition group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-300">
-              Phone Number
+              {t.phoneTitle}
             </h3>
 
             <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
@@ -224,7 +228,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-4 text-sm font-medium text-blue-600 dark:text-blue-400">
-              Call Me →
+              {t.phoneAction} →
             </p>
           </a>
 
@@ -240,7 +244,7 @@ export default function Contact() {
             </div>
 
             <h3 className="text-lg font-semibold text-gray-900 transition group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-300">
-              Telegram
+              {t.telegramTitle}
             </h3>
 
             <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
@@ -248,7 +252,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-4 text-sm font-medium text-blue-600 dark:text-blue-400">
-              Message Me →
+              {t.telegramAction} →
             </p>
           </a>
         </div>
@@ -257,12 +261,11 @@ export default function Contact() {
         <div className="mt-12 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:mt-16 sm:p-8 dark:border-white/10 dark:bg-[#101b32]">
           <div className="mb-7">
             <h3 className="text-xl font-bold text-gray-900 sm:text-2xl dark:text-white">
-              Send Me a Message
+              {t.formTitle}
             </h3>
 
             <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-              Have a question or project idea? Fill out the form
-              below and get in touch with me.
+              {t.formDescription}
             </p>
           </div>
 
@@ -274,7 +277,7 @@ export default function Contact() {
                   htmlFor="name"
                   className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
-                  Full Name
+                  {t.nameLabel}
                 </label>
 
                 <input
@@ -282,7 +285,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   autoComplete="name"
-                  placeholder="Enter your full name"
+                  placeholder={t.namePlaceholder}
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -297,7 +300,7 @@ export default function Contact() {
                   htmlFor="email"
                   className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
-                  Email Address
+                  {t.emailLabel}
                 </label>
 
                 <input
@@ -305,7 +308,7 @@ export default function Contact() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="Enter your email address"
+                  placeholder={t.emailPlaceholder}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -321,14 +324,14 @@ export default function Contact() {
                 htmlFor="subject"
                 className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Subject
+                {t.subjectLabel}
               </label>
 
               <input
                 id="subject"
                 name="subject"
                 type="text"
-                placeholder="Enter message subject"
+                placeholder={t.subjectPlaceholder}
                 value={formData.subject}
                 onChange={handleChange}
                 required
@@ -344,14 +347,14 @@ export default function Contact() {
                 htmlFor="message"
                 className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Your Message
+                {t.messageLabel}
               </label>
 
               <textarea
                 id="message"
                 name="message"
                 rows={6}
-                placeholder="Write your message here..."
+                placeholder={t.messagePlaceholder}
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -367,7 +370,7 @@ export default function Contact() {
               disabled={submitting}
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 sm:w-auto dark:bg-blue-500 dark:hover:bg-blue-600"
             >
-              {submitting ? "Sending..." : "Send Message"}
+              {submitting ? t.sendingButton : t.sendButton}
               <span aria-hidden="true">→</span>
             </button>
 
@@ -393,15 +396,14 @@ export default function Contact() {
         {/* Closing Message */}
         <div className="mt-10 text-center">
           <p className="text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
-            Thank you for visiting my portfolio. I look forward
-            to hearing from you!
+            {t.thankYou}
           </p>
         </div>
 
         {/* Follow Me */}
         <div className="mt-14 border-t border-gray-200 pt-8 dark:border-white/10">
           <h3 className="mb-5 text-center text-lg font-bold text-gray-900 dark:text-white">
-            Follow Me
+            {t.followMe}
           </h3>
 
           <div className="flex justify-center gap-4">
