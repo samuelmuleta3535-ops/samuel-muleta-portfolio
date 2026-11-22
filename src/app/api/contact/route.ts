@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-export const runtime = "nodejs";
+ 
 
 function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, (character) => {
