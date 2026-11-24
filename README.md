@@ -106,7 +106,7 @@ If you would like to discuss a project, professional opportunity, collaboration,
 
 Email: samuelmuleta3535@gmail.com
 
-GitHub: github.com/samuelmuleta3535-ops
+GitHub: https://github.com/samuelmuleta3535-ops/
 
 Telegram: @Samuel
 
