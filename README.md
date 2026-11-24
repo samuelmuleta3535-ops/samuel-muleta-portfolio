@@ -2,9 +2,9 @@
 
 A modern, responsive, and multilingual personal portfolio website built to showcase my professional profile, technical skills, projects, certifications, and development journey as a Computer Science student and developer.
 
-🌐 Live Website: Visit My Portfolio
+🌐 Live Website: Visit My Portfolio: https://samuel-muleta-portfolio.vercel.app/
 
-👨‍💻 GitHub Profile: Samuel Muleta
+👨‍💻 GitHub Profile: https://github.com/samuelmuleta3535-ops/
 
 ## 📌 About the Project
 
