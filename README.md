@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Samuel Muleta | Personal Portfolio
 
-## Getting Started
+A modern, responsive, and multilingual personal portfolio website built to showcase my professional profile, technical skills, projects, certifications, and development journey as a Computer Science student and developer.
 
-First, run the development server:
+🌐 Live Website: Visit My Portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+👨‍💻 GitHub Profile: Samuel Muleta
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📌 About the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is my personal portfolio website, created to showcase my background, technical skills, academic projects, certifications, and practical experience. It provides visitors with an easy way to explore my work, download my CV, and contact me.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✨ Key Features
 
-## Learn More
+Responsive design for desktop, tablet, and mobile.
 
-To learn more about Next.js, take a look at the following resources:
+Three languages: English, Afaan Oromoo, and Amharic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dark and light mode.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Professional profile and technical skills.
 
-## Deploy on Vercel
+Projects and certificates showcase.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+CV download.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contact form with email integration.
+
+Social media links.
+
+🛠️ Technologies Used
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,git,github,vercel" alt="Technologies Used" />
+</p>
+
+Next.js – React framework
+
+React – User interface development
+
+TypeScript – Type-safe development
+
+Tailwind CSS – Styling and responsive design
+
+Resend – Contact form email delivery
+
+Git & GitHub – Version control and source code management
+
+Vercel – Deployment and hosting
+
+📂 Portfolio Sections
+
+Home
+
+About
+
+Skills
+
+Experience
+
+Projects
+
+Certificates
+
+Contact
+
+🚀 Featured Projects
+
+1. Academic Staff Evaluation System (ASES)
+
+An academic project focused on managing and evaluating academic staff through a structured system.
+
+Repository: Academic Staff Evaluation System
+
+2. Undergraduate Project Management System
+
+A project designed to support the organization and management of undergraduate student projects.
+
+Repository: Undergraduate Project Management System
+
+3. Campus Network Design and Implementation
+
+A practical networking project involving the design and implementation of a campus network infrastructure for multi-building environments.
+
+Project documentation is available on the portfolio website.
+
+🌍 Deployment
+
+This portfolio is deployed using Vercel and connected to the GitHub repository.
+
+Every deployment can be triggered automatically when changes are pushed to the configured GitHub branch.
+
+Live Website: Visit My Portfolio
+
+🎓 About Me
+
+I am a fourth-year Computer Science student at Ambo University, Hachalu Hundessa Campus, with an expected graduation year of 2027.
+
+I am interested in software development, full-stack web development, computer networking, and solving real-world problems through technology.
+
+I continuously work to improve my technical knowledge and practical development skills through academic projects, independent learning, and hands-on experience.
+
+📬 Contact
+
+If you would like to discuss a project, professional opportunity, collaboration, or have any questions, feel free to reach out.
+
+Email: samuelmuleta3535@gmail.com
+
+GitHub: github.com/samuelmuleta3535-ops
+
+Telegram: @Samuel
+
+Portfolio: samuel-muleta-portfolio.vercel.app
+
+© 2026 Samuel Muleta. All Rights Reserved. 
