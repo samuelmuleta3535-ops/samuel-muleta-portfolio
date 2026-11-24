@@ -30,23 +30,21 @@ Social media links.
 
 ## 🛠️ Technologies Used
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,git,github,vercel" alt="Technologies Used" />
-</p>
+Next.js <img src="https://skillicons.dev/icons?i=nextjs" height="22" /> – React framework
 
-Next.js – React framework
+React <img src="https://skillicons.dev/icons?i=react" height="22" /> – User interface development
 
-React – User interface development
+TypeScript <img src="https://skillicons.dev/icons?i=ts" height="22" /> – Type-safe development
 
-TypeScript – Type-safe development
-
-Tailwind CSS – Styling and responsive design
+Tailwind CSS <img src="https://skillicons.dev/icons?i=tailwind" height="22" /> – Styling and responsive design
 
 Resend – Contact form email delivery
 
-Git & GitHub – Version control and source code management
+Git <img src="https://skillicons.dev/icons?i=git" height="22" /> – Version control
 
-Vercel – Deployment and hosting
+GitHub <img src="https://skillicons.dev/icons?i=github" height="22" /> – Source code management
+
+Vercel <img src="https://skillicons.dev/icons?i=vercel" height="22" /> – Deployment and hosting
 
 ## 📂 Portfolio Sections
 
