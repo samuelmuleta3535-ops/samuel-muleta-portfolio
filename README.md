@@ -66,19 +66,19 @@ Contact
 
 ## 🚀 Featured Projects
 
-# 1. Academic Staff Evaluation System (ASES)
+### 1. Academic Staff Evaluation System (ASES)
 
 An academic project focused on managing and evaluating academic staff through a structured system.
 
 Repository: Academic Staff Evaluation System
 
-# 2. Undergraduate Project Management System
+### 2. Undergraduate Project Management System
 
 A project designed to support the organization and management of undergraduate student projects.
 
 Repository: Undergraduate Project Management System
 
-# 3. Campus Network Design and Implementation
+### 3. Campus Network Design and Implementation
 
 A practical networking project involving the design and implementation of a campus network infrastructure for multi-building environments.
 
