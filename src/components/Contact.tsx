@@ -234,7 +234,7 @@ export default function Contact() {
 
           {/* Telegram */}
           <a
-            href="https://t.me/Samuel"
+            href="https://t.me/Samuelmuleta"
             target="_blank"
             rel="noopener noreferrer"
             className="group rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg dark:border-white/10 dark:bg-[#101b32] dark:hover:border-blue-400/50 sm:col-span-2 lg:col-span-1"
@@ -248,7 +248,7 @@ export default function Contact() {
             </h3>
 
             <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
-              @Samuel
+              Samuelmuleta
             </p>
 
             <p className="mt-4 text-sm font-medium text-blue-600 dark:text-blue-400">
