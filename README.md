@@ -1,4 +1,4 @@
-Samuel Muleta | Personal Portfolio
+## Samuel Muleta | Personal Portfolio
 
 A modern, responsive, and multilingual personal portfolio website built to showcase my professional profile, technical skills, projects, certifications, and development journey as a Computer Science student and developer.
 
@@ -6,11 +6,11 @@ A modern, responsive, and multilingual personal portfolio website built to showc
 
 👨‍💻 GitHub Profile: Samuel Muleta
 
-📌 About the Project
+## 📌 About the Project
 
 This is my personal portfolio website, created to showcase my background, technical skills, academic projects, certifications, and practical experience. It provides visitors with an easy way to explore my work, download my CV, and contact me.
 
-✨ Key Features
+## ✨ Key Features
 
 Responsive design for desktop, tablet, and mobile.
 
@@ -28,7 +28,7 @@ Contact form with email integration.
 
 Social media links.
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,git,github,vercel" alt="Technologies Used" />
@@ -48,7 +48,7 @@ Git & GitHub – Version control and source code management
 
 Vercel – Deployment and hosting
 
-📂 Portfolio Sections
+## 📂 Portfolio Sections
 
 Home
 
@@ -64,27 +64,27 @@ Certificates
 
 Contact
 
-🚀 Featured Projects
+## 🚀 Featured Projects
 
-1. Academic Staff Evaluation System (ASES)
+# 1. Academic Staff Evaluation System (ASES)
 
 An academic project focused on managing and evaluating academic staff through a structured system.
 
 Repository: Academic Staff Evaluation System
 
-2. Undergraduate Project Management System
+# 2. Undergraduate Project Management System
 
 A project designed to support the organization and management of undergraduate student projects.
 
 Repository: Undergraduate Project Management System
 
-3. Campus Network Design and Implementation
+# 3. Campus Network Design and Implementation
 
 A practical networking project involving the design and implementation of a campus network infrastructure for multi-building environments.
 
 Project documentation is available on the portfolio website.
 
-🌍 Deployment
+## 🌍 Deployment
 
 This portfolio is deployed using Vercel and connected to the GitHub repository.
 
@@ -92,7 +92,7 @@ Every deployment can be triggered automatically when changes are pushed to the c
 
 Live Website: Visit My Portfolio
 
-🎓 About Me
+## 🎓 About Me
 
 I am a fourth-year Computer Science student at Ambo University, Hachalu Hundessa Campus, with an expected graduation year of 2027.
 
@@ -100,7 +100,7 @@ I am interested in software development, full-stack web development, computer ne
 
 I continuously work to improve my technical knowledge and practical development skills through academic projects, independent learning, and hands-on experience.
 
-📬 Contact
+## 📬 Contact
 
 If you would like to discuss a project, professional opportunity, collaboration, or have any questions, feel free to reach out.
 
@@ -110,6 +110,6 @@ GitHub: github.com/samuelmuleta3535-ops
 
 Telegram: @Samuel
 
-Portfolio: samuel-muleta-portfolio.vercel.app
+Portfolio: https://samuel-muleta-portfolio.vercel.app/
 
 © 2026 Samuel Muleta. All Rights Reserved. 
